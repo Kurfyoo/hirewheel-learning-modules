@@ -5,7 +5,7 @@ import os
 def onlyAlpha(str):
     worde = ""
     for i in str:
-        if i.isalpha:
+        if i in "abcdefghijklmnopqrstuvwxyz":
             worde += i
     return worde
 
