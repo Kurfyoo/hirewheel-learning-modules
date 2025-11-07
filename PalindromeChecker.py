@@ -13,7 +13,7 @@ def onlyAlpha(str):
 os.system('clear')
 
 ## cleaning up the word so that is is ONLY lowercase alphabetic chars.
-word = (input("Enter a word: ")).lower()
+word = (input("ENTER WORD: ")).lower()
 word = onlyAlpha(word)
 print(word)
 
