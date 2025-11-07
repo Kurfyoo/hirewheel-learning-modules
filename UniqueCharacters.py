@@ -10,7 +10,9 @@ for idx, ltr in enumerate(word):
         only_unique = False
     word.replace(ltr, "")
 
-if only_unique:
+if word == "":
+    print("The word is empty.")
+elif only_unique:
     print("The word contains only unique characters.")
 else:
     print("The word contains repeats of characters.")
