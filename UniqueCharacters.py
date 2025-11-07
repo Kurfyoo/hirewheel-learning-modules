@@ -5,10 +5,11 @@ tb.clear()
 word = input("ENTER WORD: ")
 
 only_unique = True
-for idx, ltr in enumerate(word):
-    if word.count(ltr) > 1:
+for i in word:
+    if word.count(i) > 1:
         only_unique = False
-    word.replace(ltr, "")
+        break
+    word.replace(i, "")
 
 if word == "":
     print("The word is empty.")
