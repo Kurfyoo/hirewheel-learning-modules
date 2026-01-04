@@ -1,7 +1,7 @@
 import math
-import toolbox as tb
+import os
 
-tb.clear()
+os.system("clear")
 
 # rounds down to three digits
 def truncate(num):

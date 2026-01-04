@@ -1,6 +1,6 @@
-import toolbox as tb
+import os
 
-tb.clear()
+os.system("clear")
 
 word = input("ENTER WORD: ")
 
