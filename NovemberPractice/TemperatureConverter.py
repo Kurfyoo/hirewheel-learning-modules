@@ -2,22 +2,24 @@ import os
 
 os.system("clear")
 
+#user input and validation
 try:
     init_unit = input("INITIAL TEMPERATURE UNIT: ").lower()
     final_unit = input("FINAL TEMPERATURE UNIT: ").lower()
     init_temp = float(input("TEMPERATURE IN DEGREES: "))
 except:
     print("invalid input")
-    os.system("exit")
+    exit()
 
+#more input validation
 if not(final_unit in ["celsius", "fahrenheit", "kelvin"] and init_unit in ["celsius", "fahrenheit", "kelvin"]):
     print("invalid units")
-    os.system("exit")
-
+    exit()
 if final_unit == init_unit:
     print("same units")
-    os.system("exit")
+    exit()
 
+#conversion logic
 if init_unit == "celsius":
     if final_unit == "fahrenheit":
         final_temp = (init_temp * 9/5) + 32
