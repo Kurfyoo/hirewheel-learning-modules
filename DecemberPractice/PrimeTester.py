@@ -9,25 +9,28 @@ except:
     exit()
 
 if num < 0:
-    print("error. negative integer.")
+    print("no negative integers.")
     exit()
 elif num < 2:
     print(f"{num} is not prime.")
-    print("no prime numbers less than 2.")
+    print("no primes less than 2.")
+    exit()
+elif num == 2:
+    print(f"{num} is prime.\nprimes up to {num}: [2]")
     exit()
 
 primes = []
-for i in range(2, num + 1):
-    is_prime = True
+for i in range(3, num + 1,2):
+    is_prime = ""
     # Check divisibility by already found primes up to the square root of i
     for j in primes:
         if j * j > i:
             break
         if i % j == 0:
-            is_prime = False
+            is_prime = "not "
             break
-    if is_prime:
+    if not is_prime:
         primes.append(i)
 
 # Example usage:
-print(f"The prime numbers up to {num} are: {primes}")
+print(f"{num} is {is_prime}prime.\nprimes up to {num}: {primes}")
